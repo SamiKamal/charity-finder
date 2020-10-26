@@ -1,0 +1,30 @@
+{
+  "name": "charity-finder",
+  "version": "1.0.0",
+  "description": "Charity Finder is a website that takes charities from Global Giving API and sort them so users can search to find a charity that matches their philanthropic interests.",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass src/sass/main.scss dist/css/style.comp.css",
+    "compress:css": "node-sass dist/css/style.comp.css dist/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamiKamal/charity-finder.git"
+  },
+  "author": "Sami Ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamiKamal/charity-finder/issues"
+  },
+  "homepage": "https://github.com/SamiKamal/charity-finder#readme",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
