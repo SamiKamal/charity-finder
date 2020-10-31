@@ -1,2 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
 html {
-  background-color: pink; }
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: #F6FEFF; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #1E1E1E;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden; }
+
+.container {
+  display: grid;
+  grid-template-rows: minmax(350px, 30vw) repeat(2, minmax(min-content, max-content));
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 1fr)) minmax(6rem, 1fr); }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 1fr)) minmax(6rem, 1fr); } }
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-image: url("../../dist/images/heroImage.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .header__nav {
+    height: 130px;
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); }
+    .header__nav .logo {
+      padding-top: 1rem;
+      padding-left: 1rem; }
+  .header .search {
+    display: grid;
+    background-color: white;
+    border-radius: 50px;
+    width: 62rem;
+    height: 6.5rem;
+    grid-template-columns: max-content 1fr minmax(min-content, max-content);
+    box-shadow: 0 5px 11px 3px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+    .header .search__theme {
+      margin-top: .75rem;
+      position: relative; }
+      .header .search__theme::after {
+        content: "";
+        margin-left: 1rem;
+        background: #DFDFDF;
+        position: absolute;
+        top: 3px;
+        right: -.5rem;
+        height: 70%;
+        width: 2px; }
+      .header .search__theme--ul {
+        position: absolute;
+        width: 35rem;
+        background-color: white;
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 2rem 1rem;
+        border-bottom-left-radius: 23px;
+        border-bottom-right-radius: 23px;
+        box-shadow: 0 5px 11px 3px rgba(0, 0, 0, 0.03);
+        margin-top: 1.6rem;
+        margin-left: 1.6rem; }
+      .header .search__theme--li {
+        padding: .5rem 1rem;
+        cursor: pointer;
+        transition: all .2s; }
+        .header .search__theme--li:hover {
+          background-color: #C6C6C6; }
+      .header .search__theme img {
+        display: inline-block;
+        width: 24px;
+        margin-top: 10px;
+        height: auto;
+        vertical-align: middle; }
+    .header .search__buttonBox--hidden {
+      padding-left: 1.2rem;
+      overflow: hidden;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px; }
+    .header .search__buttonBox {
+      background-color: #29C065;
+      height: 10.5rem;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      margin-top: -2rem;
+      cursor: pointer;
+      transition: all .2s; }
+      .header .search__buttonBox img {
+        padding: 3rem;
+        margin-top: 5px;
+        transition: all .2s; }
+      .header .search__buttonBox:hover {
+        transform: scale(1.2); }
+        .header .search__buttonBox:hover img {
+          transform: scale(0.9); }
+    .header .search__inputBox {
+      height: 100%; }
+    .header .search__input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      padding-left: 2rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem; }
+      .header .search__input:focus {
+        outline: none; }
+      .header .search__input::placeholder, .header .search__input:placeholder-shown {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        opacity: .5; }
+
+.list {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  background-color: white;
+  width: 95rem;
+  margin: 10rem auto;
+  border-radius: 23px;
+  box-shadow: 0 5px 11px 3px rgba(0, 0, 0, 0.03); }
+  .list__box {
+    display: grid;
+    grid-column-gap: 6rem;
+    grid-template-columns: minmax(min-content, 2.7rem) 1fr;
+    padding: 4rem 8rem; }
+    .list__box:not(:last-child)::after {
+      content: "";
+      /* This is necessary for the pseudo element to work. */
+      grid-column: 1/-1;
+      display: block;
+      /* This will put the pseudo element on its own line. */
+      margin: 0 auto;
+      /* This will center the border. */
+      width: 100%;
+      /* Change this to whatever width you want. */
+      padding-top: 40px;
+      /* This creates some space between the element and the border. */
+      border-bottom: 1px solid #C6C6C6;
+      /* This creates the border. Replace black with whatever color you want. */
+      opacity: 0.5; }
+    .list__box--imageBox {
+      grid-column: 1/2;
+      display: inline-block;
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+      background-color: beige;
+      box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden; }
+  .list__img {
+    width: 16rem;
+    height: 16rem; }
+  .list__info {
+    grid-column: 2/3;
+    position: relative; }
+  .list__id {
+    margin-top: -10px; }
+  .list__themes {
+    margin-top: 1rem; }
+  .list__location {
+    position: absolute;
+    bottom: -1rem; }
+
+.footer {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.5rem;
+  background-color: #2D2D2D;
+  color: white;
+  padding: 4rem 6rem; }
+  .footer__credits {
+    font-weight: 500; }
+    .footer__credits span {
+      font-weight: bold;
+      color: #29C065; }
+  .footer__social--nav {
+    list-style-type: none; }
+  .footer__social--li {
+    display: inline-block; }
+    .footer__social--li:not(:last-child) {
+      margin-right: 1rem; }
+    .footer__social--li img {
+      width: 24px;
+      transition: all .2s; }
+      .footer__social--li img:hover {
+        transform: scale(1.2); }
+
+.logo {
+  font-size: 2.8rem;
+  color: white; }
+  .logo span {
+    color: #29C065; }
+
+.search__theme--text {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 10px;
+  color: #1E1E1E;
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+.heading-1 {
+  font-size: 2.9rem; }
+
+.list__id {
+  font-size: 1rem;
+  color: #d6d6d6;
+  font-weight: bold; }
+
+.list__themes {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #29C065; }
+
+.list__location {
+  font-size: 1.4rem;
+  font-weight: 500; }

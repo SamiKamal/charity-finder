@@ -1,0 +1,65 @@
+.list{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    
+    background-color: white;
+    width: 95rem;
+    margin: 10rem auto;
+    border-radius: 23px;
+    box-shadow: 0 5px 11px 3px rgba(0,0,0,0.03);
+
+    &__box{
+        display: grid;
+        grid-column-gap: 6rem;
+        grid-template-columns: minmax(min-content, 2.7rem) 1fr;
+
+        padding: 4rem 8rem;
+        // border-bottom: 1px solid black;
+
+
+        &:not(:last-child)::after{
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            grid-column: 1/-1;
+            display: block; /* This will put the pseudo element on its own line. */
+            margin: 0 auto; /* This will center the border. */
+            width: 100%; /* Change this to whatever width you want. */
+            padding-top: 40px; /* This creates some space between the element and the border. */
+            border-bottom: 1px solid $color-grey-light-2; /* This creates the border. Replace black with whatever color you want. */
+            opacity: 0.5;
+            }
+    
+        &--imageBox{
+            grid-column: 1/2;
+            display: inline-block;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            background-color: beige;
+            box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+    }
+    
+    &__img{
+        width: 16rem;
+        height: 16rem;
+
+    }
+    &__info{
+        grid-column: 2/3;
+        position: relative;
+    }
+    &__id{
+        margin-top: -10px;
+    }
+
+    &__themes{
+        margin-top: 1rem;
+    }
+
+    &__location{
+        position: absolute;
+        bottom: -1rem;
+    }
+}
