@@ -14,7 +14,7 @@ $font-primary: 'Montserrat', sans-serif;
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
-$bp-medium: 43.75em;    // 700px;
+$bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;    // 600px;
 $bp-smallest: 31.25em;    // 500px;
 
@@ -63,4 +63,8 @@ body {
         grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content,1fr)) minmax(6rem, 1fr);
     }
 
+}
+
+.hide{
+    display: none;
 }

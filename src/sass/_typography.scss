@@ -12,10 +12,25 @@
     vertical-align: middle;
     text-align: center;
     margin-left: 2rem;
-    margin-top: 10px;
+    margin-top: 1.1rem;
     color: $color-dark;
     font-size: 1.8rem;
     font-weight: 500;
+
+    @media only screen and (max-width: $bp-largest){
+        margin-top: 0.9rem;
+    }
+
+
+    @media only screen and (max-width: $bp-small){
+        margin-top: 1.8rem;
+    }
+
+    @media only screen and (max-width: 350px){
+        font-size: 1.5rem;
+    }
+
+
 }
 
 .heading-1{
@@ -29,7 +44,7 @@
 }
 
 .list__themes{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: $color-primary;
 }

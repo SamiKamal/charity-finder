@@ -35,9 +35,24 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @media only screen and (max-width: $bp-small){
+            max-width: 55rem;
+        }
+
+        @media only screen and (max-width: 350px){
+            max-width: 45rem;
+        }
+
         &__theme{
             margin-top: .75rem;
             position: relative;
+            cursor: pointer;
+
+            @media only screen and (max-width: $bp-small){
+                margin-top: 0;
+            }
+    
+    
             
             &::after{
                 content: "";
@@ -79,9 +94,14 @@
             img{
                 display: inline-block;
                 width: 24px;
-                margin-top: 10px;            
+                margin-top: 1rem;            
                 height: auto;
                 vertical-align: middle;
+
+                @media only screen and (max-width: $bp-small){
+                    width: 18px;
+                    margin-top: 1.6rem;
+                }
             }
         }
 
@@ -89,7 +109,8 @@
             padding-left: 1.2rem;
             overflow: hidden;
             border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
+            border-bottom-right-radius: 50px;  
+
         }
         &__buttonBox{
             background-color: $color-primary;
@@ -100,13 +121,22 @@
             cursor: pointer;
             transition: all .2s;
 
-         
 
             img{
                 padding: 3rem;
                 // padding-bottom: 5rem;
                 margin-top: 5px;
                 transition: all .2s;
+
+                @media only screen and (max-width: $bp-largest){
+                    // height: rem;
+                    margin-top: 0;
+        
+                }
+
+                @media only screen and (max-width: $bp-small){
+                    width: 64px;
+                }        
             }
 
             &:hover{
