@@ -8,6 +8,7 @@
     border-radius: 23px;
     box-shadow: 0 5px 11px 3px rgba(0,0,0,0.03);
     position: relative;
+    z-index: -1;
 
     @media only screen and (max-width: $bp-largest){
         padding-bottom: 2rem;

@@ -378,8 +378,7 @@ body {
   margin: 10rem auto;
   border-radius: 23px;
   box-shadow: 0 5px 11px 3px rgba(0, 0, 0, 0.03);
-  position: relative;
-  z-index: -1; }
+  position: relative; }
   @media only screen and (max-width: 75em) {
     .list {
       padding-bottom: 2rem; } }
